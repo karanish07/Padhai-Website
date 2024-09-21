@@ -15,3 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
         navbarMenu.classList.toggle('active');
     });
 });
+
+// script.js
+function showNotification() {
+    var notificationPanel = document.getElementById('notification-panel');
+    notificationPanel.style.display = 'block';
+  
+    // Automatically hide the notification after 5 seconds
+    setTimeout(closeNotification, 5000);
+  }
+  
+  function closeNotification() {
+    var notificationPanel = document.getElementById('notification-panel');
+    notificationPanel.style.display = 'none';
+  }
+  

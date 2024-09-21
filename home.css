@@ -1,0 +1,184 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.contact-btn {
+    padding: 10px 15px;
+    background-color: #e8ff00;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 80px;
+}
+
+.login-btn {
+    padding: 15px 30px;
+    background-color: #e8ff00;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+}
+.login-btn:hover {
+    background-color: #ffd500;
+    transform: scale(1.05);
+}
+
+/* Section Box Styles */
+.section {
+    padding: 60px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.section-box {
+    width: 400px;
+    height: 200px;
+    margin: 25px;
+    position: relative;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-size: cover; /* Background image to cover the whole box */
+    background-position: center;
+}
+
+.section-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Apply the image as a background */
+.section-box:nth-child(1) {
+    background-image: url('quiz.jpg');
+}
+
+.section-box:nth-child(2) {
+    background-image: url('quiz.jpg');
+}
+
+.section-box:nth-child(3) {
+    background-image: url('project.jpg');
+}
+
+/* Text Styling on Top of Image */
+.section-box-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* White text for contrast */
+    text-align: center;
+    z-index: 2;
+}
+
+/* Optional: Add an overlay for better text readability */
+.section-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.section-box-content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+    z-index: 99;
+}
+
+.section-box-content p {
+    font-size: 14px;
+    color: #fff;
+}
